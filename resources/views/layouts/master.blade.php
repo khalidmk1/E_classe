@@ -15,8 +15,8 @@
   </head>
   <body>
 
-    @include("layouts.navbar")
-    @include('layouts.main_baner')
+    @include("layouts.menu_page.navbar")
+    @include('layouts.menu_page.main_baner')
 
 
     <!-- Optional JavaScript; choose one of the two! -->

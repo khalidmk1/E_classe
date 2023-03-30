@@ -5,6 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Auth;
+
 
 class admin
 {
@@ -16,6 +18,9 @@ class admin
     public function handle(Request $request, Closure $next): Response
     {
         if (Auth::check()) {
+           if(auth()->user()->active == 1)
+           {
+
             if(auth()->user()->roles == "1")
             {
                 return $next($request);
@@ -24,9 +29,14 @@ class admin
             {
                 return redirect('/')->with('error',"You don't have admin access.");
             }
+
         }
         else {
-            return redirect('/login')->with('message',"please login");
+            return redirect('/login')->with('message',"ur not active");
         }
+    }
+    else {
+        return redirect('/login')->with('message',"please login");
+    }
     }
 }
