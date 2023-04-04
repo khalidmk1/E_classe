@@ -1,0 +1,19 @@
+.card{
+    top: 117px;
+}
+
+.card:hover{
+    top: 0%;
+    animation-name: chose;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes chose {
+0%   {top: 117px;}
+100% {top: 0%;}
+}
+
+.card{
+    border: none;
+}

@@ -17,26 +17,23 @@ class user
     public function handle(Request $request, Closure $next): Response
     {
         if (Auth::check()) {
-            if(auth()->user()->active = 1)
-            {
 
-             if(auth()->user()->roles == "3")
-             {
-                 return $next($request);
-             }
-             else
-             {
-                 return redirect('/')->with('error',"You don't have admin access.");
-             }
+            if (auth()->user()->active == 1) {
 
-         }
-         else {
-             return redirect('/login')->with('message',"ur not active");
-         }
-     }
-     else {
-         return redirect('/login')->with('message',"please login");
-     }
-     }
+                if (auth()->user()->roles == "3") {
+                    return redirect('/user');
+                } elseif (Auth()->user()->roles == "2") {
+                    return redirect('/prof');
+                } elseif (auth()->user()->roles == "1") {
+                    return redirect('/admin');
+                } else {
+                    return redirect('/')->with('error', "You don't have access.");
+                }
+            } else {
+                return redirect('/')->with('message', "ur not active");
+            }
+        } else {
+            return redirect('/dashboard')->with('message', "please login");
+        }
     }
-
+}

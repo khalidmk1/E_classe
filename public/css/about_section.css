@@ -1,0 +1,25 @@
+.line{
+    rotate: 90deg;
+    height: 2px;
+    background-color: black;
+    max-width: 192px;
+    position: relative;
+    top: 114px;
+}
+
+.borde{
+    border: 2px solid;
+}
+
+.about_text{
+    margin-top: 208px;
+}
+
+.video_content{
+    margin: 50px 0 50px 0;
+}
+
+.embed-responsive-item{
+    height: 263px;
+    width: 541px;
+}

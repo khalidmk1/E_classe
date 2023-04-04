@@ -1,9 +1,12 @@
 {{-- main_baner --}}
+
+{{-- f 702 px khasse itabdale design bache itgade fl mobile --}}
+
 <div class="container-fluid bg-primary text-white  overflow-hidden h-100 ">
     <div class="row menu_form ">
         <div class="col d-flex justify-content-center">Learn From Home</div>
         <div class="col d-flex justify-content-center">E-CLASSE</div>
-        <div class="col d-flex justify-content-center"><button type="button" class="btn btn-primary">Primary</button>
+        <div class="col d-flex justify-content-center"><button type="button" class="btn btn-dark">Primary</button>
         </div>
     </div>
     <div class="row chose_section">

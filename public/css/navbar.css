@@ -14,3 +14,12 @@
 .btn-primary{
     margin-right:3px ;
 }
+
+.nav-link{
+    border: 3px solid #f8f9fa;
+}
+
+.nav-link:hover{
+    border: 3px solid blue;
+    border-radius: 2px;
+}

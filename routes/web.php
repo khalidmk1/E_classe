@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified' ,'user'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -30,15 +30,15 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/user', function () {
     return view('user.index');
-})->middleware(['auth', 'user']);
+})->middleware(['auth']);
 
 Route::get('/prof', function () {
     return view('prof.index');
-})->middleware(['auth', 'prof']);
+})->middleware(['auth']);
 
 Route::get('/admin', function () {
     return view('admin.index');
-})->middleware(['auth', 'admin']);
+})->middleware(['auth']);
 
 
 

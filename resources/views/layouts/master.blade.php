@@ -10,13 +10,21 @@
     <link rel="stylesheet" href="{{ URL::asset('public/header.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{URL::asset('css/Main_banner.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('css/about_section.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('css/about_us.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('css/contact_us.css')}}">
 
-    <title>Hello, world!</title>
+    <title>E_CLASSE</title>
   </head>
   <body>
 
     @include("layouts.menu_page.navbar")
     @include('layouts.menu_page.main_baner')
+    @include('layouts.menu_page.about_section')
+    @include('layouts.menu_page.about_us')
+    @include('layouts.menu_page.chose_section')
+    @include('layouts.menu_page.our_student')
+    @include('layouts.menu_page.contact_us')
 
 
     <!-- Optional JavaScript; choose one of the two! -->

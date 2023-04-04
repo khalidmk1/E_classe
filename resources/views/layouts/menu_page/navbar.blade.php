@@ -8,13 +8,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 justify-content-center">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
+          <a class="nav-link " aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About us</a>
+          <a class="nav-link " href="#">About us</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Niveau
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -25,10 +25,10 @@
         </li>
       </ul>
       <div class="d-flex">
-        <input class="btn btn-primary" type="submit" value="Login">
+        <a href="{{ URL::route('dashboard'); }}"><input class="btn btn-primary" type="submit" value="Login"></a>
         <img src="{{URL::asset('img/Login_icon.png')}}" class="rounded-circle" alt="icon_login">
       </div>
     </div>
   </div>
 </nav>
-
+ 
