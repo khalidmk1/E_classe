@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\user;
 use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -16,9 +17,11 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): View
     {
-        return view('profile.edit', [
-            'user' => $request->user(),
-        ]);
+
+        return view(
+            'dashboard.dashboard_Profile',
+            ['user' => $request->user()]
+        );
     }
 
     /**
@@ -28,11 +31,14 @@ class ProfileController extends Controller
     {
         $request->user()->fill($request->validated());
 
+        $request->user()->first_name = $request->input('first_name');
+        $request->user()->last_name = $request->input('last_name');
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
         }
 
-        $request->user()->save();
+        $request->user()->update();
+
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }

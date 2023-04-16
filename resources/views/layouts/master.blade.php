@@ -18,13 +18,13 @@
   </head>
   <body>
 
-    @include("layouts.menu_page.navbar")
-    @include('layouts.menu_page.main_baner')
-    @include('layouts.menu_page.about_section')
-    @include('layouts.menu_page.about_us')
-    @include('layouts.menu_page.chose_section')
-    @include('layouts.menu_page.our_student')
-    @include('layouts.menu_page.contact_us')
+    @include("landing_page.navbar")
+    @include('landing_page.main_baner')
+    @include('landing_page.about_section')
+    @include('landing_page.about_us')
+    @include('landing_page.chose_section')
+    @include('landing_page.our_student')
+    @include('landing_page.contact_us')
 
 
     <!-- Optional JavaScript; choose one of the two! -->

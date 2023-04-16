@@ -35,5 +35,6 @@ class user
         } else {
             return redirect('/dashboard')->with('message', "please login");
         }
+
     }
 }

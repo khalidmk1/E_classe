@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
+use Psy\Readline\Hoa\Console;
 
 class prof
 {
@@ -16,6 +17,7 @@ class prof
      */
     public function handle(Request $request, Closure $next): Response
     {
+      
         if (Auth::check()) {
             if(auth()->user()->active = 1)
             {
@@ -38,4 +40,5 @@ class prof
      }
      }
     }
+
 
