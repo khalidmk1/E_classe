@@ -25,11 +25,17 @@
 
 .all_courses_section:hover{
     top: 0%;
-    animation-name: chose;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-direction: alternate;
   }
+  
   @keyframes chose {
     0%   {top: 77%;}
     100% {top: 0%;}
   }
+
+@keyframes chose_1 {
+    0%   {top: 0%;}
+    100% {top: 77%;}
+  }
+

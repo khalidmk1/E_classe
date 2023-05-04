@@ -26,12 +26,16 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard.dashboard_content');
+    return view('dashboard.content_home');
 })->middleware(['auth', 'verified' ])->name('dashboard');
 
 Route::get('/register', function () {
     return view('auth.register');
 })->middleware(['auth', 'verified' ])->name('register');
+
+Route::get('/navigate', function () {
+    return view('dashboard.navigate');
+})->middleware(['auth', 'verified' ])->name('navigate');
 
 
 require __DIR__.'/auth.php';

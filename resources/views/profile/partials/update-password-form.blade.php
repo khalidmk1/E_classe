@@ -32,7 +32,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button class="btn btn-primary">{{ __('Save') }}</x-primary-button>
+            <x-primary-button class="btn btn-success swalDefaultSuccess">{{ __('Save') }}</x-primary-button>
 
             @if (session('status') === 'password-updated')
                 <p
@@ -40,7 +40,7 @@
                     x-show="show"
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-gray-600"
+                    class="swalDefaultSuccess"
                 >{{ __('Saved.') }}</p>
             @endif
         </div>

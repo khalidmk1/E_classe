@@ -19,7 +19,7 @@ class ProfileController extends Controller
     {
 
         return view(
-            'dashboard.dashboard_Profile',
+            'dashboard.Profile',
             ['user' => $request->user()]
         );
     }

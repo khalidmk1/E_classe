@@ -9,6 +9,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Starter</title>
 
+ {{--  bootstrap --}}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="{{URL::asset('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback')}}">
   <!-- Font Awesome Icons -->
@@ -32,13 +34,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
   {{-- persennall css --}}
   <link rel="stylesheet" href="{{URL::asset('css/dashboard_content.css')}}">
   <link rel="stylesheet" href="{{URL::asset('css/profile_update.css')}}">
-  
+
 </head>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
-    @include('dashboard.navbar_dashboard')
+    @include('dashboard.navbar')
     @include('dashboard.sidebar')
 
 </div>
@@ -78,5 +80,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{URL::asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{URL::asset('dist/js/pages/dashboard.js')}}"></script>
+<!-- boostrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
